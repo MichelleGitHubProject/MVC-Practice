@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+    function startMyApp(url)
+    {
+      document.location = url;
+      setTimeout( function()
+      {
+           if( confirm( '你還沒安裝旅遊尋寶王，快去安裝吧~'))
+          {
+            document.location = 'https://itunes.apple.com/tw/app/id1276132714';
+          }
+      }, 500);
+     }
+	 
+  //$(document).ready(function() {
+   //    alert("-----Enter jQuery-----");  
+  // });
+
+	function CheckOS() {
+		 alert("-----Enter Function-----");  
+   			if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+ 		   alert(navigator.userAgent+"-----Iphone");  
+		     //window.location.href ="iPhone.html";
+			 } else if (/(Android)/i.test(navigator.userAgent)) {
+			 alert(navigator.userAgent+"-----Android"); 
+			 // window.location.href ="Android.html";
+			 } else {
+			 alert(navigator.userAgent+"-----other"); 
+			 // window.location.href ="pc.html";
+			 }
+	}
+	 
+</script>
+</head>
+<body onload="CheckOS()">
+
+
+    <a href="cocomen://">123</a>
+    <P>
+    <a href="#" onclick="startMyApp('cocomen://4eJVjXT1l%2fzXDLABoYcoVUM5YtTGLWx0HRmtNNXCN3xALsuh6eaU%2bg%3d%3d')">連結</a>
+    <P>
+
+
+</body>
+
+</html>
