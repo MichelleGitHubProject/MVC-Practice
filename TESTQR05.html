@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+      	 alert("-----Enter Function-----");  
+		 		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+ 		   alert(navigator.userAgent+"-----Iphone");  
+		     //window.location.href ="iPhone.html";
+			 } else if (/(Android)/i.test(navigator.userAgent)) {
+			 alert(navigator.userAgent+"-----Android"); 
+			 // window.location.href ="Android.html";
+			 } else {
+			 alert(navigator.userAgent+"-----other"); 
+			// window.location.href ="pc.html";
+			 }
+    });
+ 
+   
+    </script>
+</head>
+<body>
+ <iframe src="http://techcrunch.com"></iframe>
+
+
+</body>
