@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+		
+		 //取得URL所帶進來的Intent物件
+       // Intent tIntent = this.getIntent();
+        //取得Schema
+        //String tSchema = tIntent.getScheme();
+ 
+        //取得URL
+      //  Uri myURI = tIntent.getData(); 
+      //  if (myURI != null) {
+           //取得URL中的Query String參數
+      //     String tValue = myURI.getQueryParameter("SID");
+       // }
+		alert('location.href: '+location.href);　//輸出値為 location.href: http://www.wibibi.com/test.html?tid=222#333
+          //  alert("-----Enter-----"+tSchema);
+			
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {   /***IOS***/
+                alert(navigator.userAgent + "-----Iphone");
+                var ifr = document.createElement("iframe");
+                ifr.src = "cocomen://"; /***open app src***/
+                ifr.style.display = "none";
+                document.body.appendChild(ifr);
+                window.setTimeout(function () {
+                    document.body.removeChild(ifr);
+                    window.location.href = "https://itunes.apple.com/tw/app/id1276132714"; /***download app from itunes***/
+                }, 2000)
+            }
+			
+            else if (/(Android)/i.test(navigator.userAgent)) {    /***Android***/
+                alert(navigator.userAgent + "-----Android");
+                window.location.href = "cocomen://"; /***open app src***/
+                window.setTimeout(function () {
+                    window.location.href = "https://play.google.com/store/apps/details?id=com.bino.cocoma"; /***download app from play store***/
+                }, 2000);
+            }
+			
+            else {
+                alert(navigator.userAgent + "-----other");    /***Other***/
+				window.location.href = "http://www.cocomen-iot.com/"; /***open official website***/
+            }
+			
+        });
+
+
+    </script>
+</head>
+<body>
+</body>
